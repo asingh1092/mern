@@ -1,9 +1,27 @@
 import Header from "./header";
-import { useState } from "react";
+// these are hook functions for react
+import { useEffect, useState } from "react";
 
 const App = () => {
   // reactive variable
   const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    // can be used to fetch, Axios, data analytics
+    // basically anything outside of React
+    // to add side effects
+    const intervalId = setInterval(() => {
+      setCounter(counter + 1);
+    }, 1000);
+
+    // console logs dont need clean up usually
+    console.log("Rendering app component");
+
+    return () => {
+      // side effect clean up usually for async calls
+      clearInterval(intervalId);
+    };
+  });
 
   return (
     <div className="container">
