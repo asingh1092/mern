@@ -1,5 +1,7 @@
 import Header from "./header";
 
+const TODOS = ["learn react", "build something"];
+
 const App = () => {
   // this is jsx
   return (
