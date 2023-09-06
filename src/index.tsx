@@ -13,6 +13,7 @@ const root = createRoot(container);
 // fetch or Axios to hit endpoints
 axios.get(`${API_SERVER_URL}/contests`).then((resp) => {
   console.log(resp);
+  root.render(
+    <App initialData={{ contests: resp.data.constests }} />,
+  );
 });
-
-root.render(<App />);

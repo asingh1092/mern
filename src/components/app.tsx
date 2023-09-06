@@ -2,7 +2,8 @@ import Header from "./header";
 // these are hook functions for react
 import { useEffect, useState } from "react";
 
-const App = () => {
+const App = (initialData) => {
+  console.log(initialData);
   // reactive variable
   const [counter, setCounter] = useState(0);
 
