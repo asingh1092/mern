@@ -11,17 +11,19 @@ const App = () => {
     // basically anything outside of React
     // to add side effects
     const intervalId = setInterval(() => {
-      setCounter(counter + 1);
+      console.log({ counter });
     }, 1000);
 
-    // console logs dont need clean up usually
+    // console logs don't need to clean up usually
     console.log("Rendering app component");
 
     return () => {
       // side effect clean up usually for async calls
       clearInterval(intervalId);
     };
-  });
+
+    // deps array is used to block effects unless some deps needs re-rendering
+  }, [counter]);
 
   return (
     <div className="container">
