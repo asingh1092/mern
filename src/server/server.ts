@@ -3,6 +3,7 @@ import express from "express";
 import os from "os";
 
 import config from "./config";
+import apiRouter from "./api-router";
 
 const server = express();
 
@@ -10,7 +11,8 @@ server.use(express.static("dist")); // server files in dist folder
 
 server.set("view engine", "ejs"); // set templating as EJS
 
-server.use("/", (req, res) => {
+server.use("/api", apiRouter);
+server.get("/", (req, res) => {
   // render html using EJS
   res.render("index", {
     // initial content shows up before react does and webpack does it's bundling
