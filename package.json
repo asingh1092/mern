@@ -1,0 +1,26 @@
+{
+  "name": "mnr",
+  "version": "1.0.0",
+  "description": "MERN training project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asingh1092/mern.git"
+  },
+  "keywords": [
+    "mern",
+    "mongo",
+    "express",
+    "react",
+    "node"
+  ],
+  "author": "asingh1092",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asingh1092/mern/issues"
+  },
+  "homepage": "https://github.com/asingh1092/mern#readme"
+}
