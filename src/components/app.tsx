@@ -1,19 +1,21 @@
 import Header from "./header";
-
-const TODOS = ["learn react", "build something"];
+import { useState } from "react";
 
 const App = () => {
-  // this is jsx
+  // reactive variable
+  const [counter, setCounter] = useState(0);
+
   return (
     <div className="container">
       <Header message="Naming Contests" />
-      {/*{Math.random() > 0.5 && <h2>with JSX</h2>}*/}
-      {/*{TODOS.map((element) => {*/}
-      {/*  return <li>{element}</li>;*/}
-      {/*})}*/}
-      {/*{true}*/}
-      {/*{false}*/}
-      {/*{undefined}*/}
+      <button
+        // event handler for counter variable
+        onClick={() => {
+          setCounter(counter + 1);
+        }}
+      >
+        {counter}
+      </button>
     </div>
   );
   // below this comment is what ts translates jsx to
