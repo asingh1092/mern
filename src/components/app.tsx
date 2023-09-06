@@ -1,15 +1,4 @@
-// tsx file is a typescript file that runs jsx
-
-// react dom
-import { createRoot } from "react-dom";
-
-const TODOS = ["learn react", "build something"];
-
-// Header is a component
-// message is a prop
-const Header = ({ message }) => {
-  return <div className="header">message</div>;
-};
+import Header from "./header";
 
 const App = () => {
   // this is jsx
@@ -29,8 +18,4 @@ const App = () => {
   // return React.createElement("Div", null, "Hello React!");
 };
 
-// @ts-ignore
-const container = document.getElementById("app");
-const root = createRoot(container);
-
-root.render(<App />);
+export default App;
