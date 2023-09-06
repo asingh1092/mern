@@ -1,3 +1,7 @@
+// import webpack using require cuz Node
+// isn't configured to run import for js files
+const webpack = require("webpack");
+
 module.exports = {
   entry: "./src/index.tsx",
   resolve: {
@@ -14,4 +18,10 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new webpack.EnvironmentPlugin({
+      HOST: "0.0.0.0",
+      PORT: "8080",
+    }),
+  ],
 };
