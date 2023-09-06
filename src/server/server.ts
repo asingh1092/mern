@@ -1,4 +1,8 @@
 import express from "express";
+// @ts-ignore
+import os from "os";
+
+import config from "./config";
 
 const server = express();
 
@@ -12,7 +16,10 @@ server.use("/", (req, res) => {
   });
 });
 
-server.listen("8080", "0.0.0.0", () => {
+server.listen(config.PORT, config.HOST, () => {
   // can use localhost instead of 0.0.0.0
-  console.info("Express server is listening at http://0.0.0.0:8080");
+  console.info(
+    `Express server is listening at ${config.SERVER_URL}`,
+    `Free Mem:${os.freemem() / 1024 / 1024}`,
+  );
 });
