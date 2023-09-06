@@ -8,9 +8,10 @@ const server = express();
 
 server.use(express.static("dist")); // server files in dist folder
 
-server.set("view engine", "ejs");
+server.set("view engine", "ejs"); // set templating as EJS
 
 server.use("/", (req, res) => {
+  // render html using EJS
   res.render("index", {
     content: "EJS is <em>cool</em>",
   });
