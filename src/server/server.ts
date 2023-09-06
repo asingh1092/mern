@@ -4,15 +4,12 @@ import os from "os";
 
 import config from "./config";
 import apiRouter from "./api-router";
-import cors from "cors";
 
 const server = express();
 
 server.use(express.static("dist")); // server files in dist folder
 
 server.set("view engine", "ejs"); // set templating as EJS
-
-server.use(cors());
 
 server.use("/api", apiRouter);
 server.get("/", (req, res) => {
