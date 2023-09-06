@@ -4,8 +4,12 @@ const server = express();
 
 server.use(express.static("dist")); // server files in dist folder
 
+server.set("view engine", "ejs");
+
 server.use("/", (req, res) => {
-  res.send("Hello");
+  res.render("index", {
+    content: "EJS is <em>cool</em>",
+  });
 });
 
 server.listen("8080", "0.0.0.0", () => {
