@@ -4,7 +4,8 @@
   "description": "MERN training project",
   "main": "index.js",
   "scripts": {
-    "dev:server": "tsnd src/server/server.ts"
+    "dev:server": "tsnd src/server/server.ts",
+    "dev:db" : "tsnd src/dev/load-test-data.ts"
   },
   "repository": {
     "type": "git",
