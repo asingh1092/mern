@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/asingh1092/mern/issues"
   },
-  "homepage": "https://github.com/asingh1092/mern#readme"
+  "homepage": "https://github.com/asingh1092/mern#readme",
+  "dependencies": {
+    "typescript": "^5.2.2"
+  }
 }
