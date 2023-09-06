@@ -13,7 +13,8 @@ server.set("view engine", "ejs"); // set templating as EJS
 server.use("/", (req, res) => {
   // render html using EJS
   res.render("index", {
-    content: "EJS is <em>cool</em>",
+    // initial content shows up before react does and webpack does it's bundling
+    initialContent: "Loading...",
   });
 });
 
