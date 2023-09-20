@@ -29,7 +29,7 @@ const App = ({ initialData }) => {
   return (
     <div className="container">
       <Header message="Naming Contests" />
-      <ContestList contests={initialData.contests} />
+      <ContestList initialContests={initialData.contests} />
       {/*<button*/}
       {/*  // event handler for counter variable*/}
       {/*  onClick={() => {*/}
