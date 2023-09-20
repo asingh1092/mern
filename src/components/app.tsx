@@ -1,4 +1,5 @@
 import Header from "./header";
+import ContestList from "./contest-list";
 // these are hook functions for react
 
 const App = ({ initialData }) => {
@@ -28,20 +29,7 @@ const App = ({ initialData }) => {
   return (
     <div className="container">
       <Header message="Naming Contests" />
-      <div className="contest-list">
-        {initialData.contests.map((contest) => {
-          return (
-            <div className="contest-preview">
-              <div className="category">
-                {contest.categoryName}
-              </div>
-              <div className="contest">
-                {contest.contestName}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <ContestList contests={initialData.contests} />
       {/*<button*/}
       {/*  // event handler for counter variable*/}
       {/*  onClick={() => {*/}
