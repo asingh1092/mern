@@ -1,6 +1,6 @@
 type Contest = {
-  categoryName: String;
-  contestName: String;
+  categoryName: string;
+  contestName: string;
 };
 
 export default Contest;
