@@ -1,5 +1,5 @@
 import * as React from "react";
-import Contest from "../models/Contest";
+import Contest from "../models/contest";
 
 const ContestPreview: React.FC<{ contest: Contest }> = ({
   contest,
